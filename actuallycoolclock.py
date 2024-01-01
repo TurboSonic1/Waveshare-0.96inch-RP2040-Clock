@@ -9,7 +9,7 @@ GREEN = 0xE007
 BLUE = 0x1F00
 WHITE = 0xFFFF
 BLACK = 0x0000
-# Everything below this line I have no idea how it works
+# Somehow helps intialize lcd I think
 class LCD_0inch96(framebuf.FrameBuffer):
     def __init__(self):
     
@@ -211,11 +211,7 @@ if __name__=='__main__':
     minutes = input("Please set minute")
     seconds = input("Please set seconds")
     while ignorelol == 5:
-        lcd.fill(BLACK)
-        lcd.text( (month) + "/" + (day) + "/" + (year),0,0,GREEN)
-        lcd.text( (hours) + ":" + (minutes) + ":" + (seconds),0,15,GREEN)
-        lcd.display()
-        time.sleep(0.965) # Doesn't go out of sync by a significant amount in my testing
+        start = time.time()
         # Converting strings to ints for modifying
         combined_seconds = int(add1) + int(seconds) 
         combined_minutes = int(minutes)
@@ -264,6 +260,13 @@ if __name__=='__main__':
         day = str(combined_day)
         month = str(combined_month)
         year = str(combined_year)
+        lcd.fill(BLACK)
+        lcd.text( (month) + "/" + (day) + "/" + (year),0,0,GREEN)
+        lcd.text( (hours) + ":" + (minutes) + ":" + (seconds),0,15,GREEN)
+        lcd.display()
+        end = time.time()
+        precisesecond = 1 - (end - start)
+        time.sleep(precisesecond)
     
     
     
