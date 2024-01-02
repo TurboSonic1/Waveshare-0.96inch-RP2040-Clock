@@ -203,7 +203,8 @@ if __name__=='__main__':
     # Actual code
     lcd = LCD_0inch96()   
     lcd.fill(BLACK)   
-    lcd.text("check computer",5,15,GREEN)
+    lcd.text("Check terminal",5,15,GREEN)
+    lcd.display()
     year = input("Please set year") # You have to set time manually
     month = input("Please set month")
     day = input("Please set day")
