@@ -265,15 +265,6 @@ if __name__=='__main__':
         lcd.text( (hours) + ":" + (minutes) + ":" + (seconds),0,15,GREEN)
         lcd.display()
         end = time.ticks_us()
-        diff = time.ticks_diff(end, start) / 1000000
-        precisesecond = 1 - diff
-        time.sleep(precisesecond)
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        diff = time.ticks_diff(end, start)
+        precisemicroseconds = 1000000 - diff
+        time.sleep_us(precisemicroseconds)
