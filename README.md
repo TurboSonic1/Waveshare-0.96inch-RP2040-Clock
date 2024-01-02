@@ -4,3 +4,5 @@ Just a simple clock that you can set manually that's pretty accurate without rel
 The date is in M/D/Y format for 0.96 inch screens and displays in 24 hour time
 
 ±1ms precision every second.
+
+Note: This is written in MICROPYTHON NOT PYTHON, you cannot use this in python code directly without modifying the code slightly but it shouldn't be more than a few lines you need to change on the actual logic of it.
