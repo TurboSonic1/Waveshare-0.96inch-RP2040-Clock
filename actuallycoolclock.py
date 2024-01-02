@@ -233,7 +233,7 @@ if __name__=='__main__':
                         if combined_day == int(exceedsmax31):
                             combined_day = int(nowone)
                             combined_month = int(addone)
-                            if combined_year == int(omgnewyear):
+                            if combined_month == int(omgnewyear):
                                 combined_year = int(addone)
                                 combined_month = int(nowone)
                            
@@ -250,7 +250,7 @@ if __name__=='__main__':
                         if combined_day == int(exceedsmax32):
                             combined_day = int(nowone)
                             combined_month = int(addone)
-                            if combined_year == int(omgnewyear):
+                            if combined_month == int(omgnewyear):
                                 combined_year = int(addone)
                                 combined_month = int(nowone)
         # Converting everything back to string to display on screen
