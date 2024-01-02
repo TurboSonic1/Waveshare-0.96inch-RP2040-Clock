@@ -1,7 +1,6 @@
 from machine import Pin,SPI,PWM
 import framebuf
-import time
-import math
+import time
 
 #color is BGR
 RED = 0x00F8
